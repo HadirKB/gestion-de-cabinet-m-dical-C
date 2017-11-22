@@ -74,7 +74,7 @@ else {
    free (A);
 }
 else
- { printf("lélement n'existe pas");
+ { printf("lÃ©lement n'existe pas");
 }
 }
 return p;
