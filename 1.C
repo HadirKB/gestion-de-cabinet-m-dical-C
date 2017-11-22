@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 	
-                                  /*la déclaration des structure */
+                                  /*la dÃ©claration des structure */
 typedef struct patient{
 char nometprenom[50];
 char date[11];
@@ -13,7 +13,7 @@ int cin;};
 typedef struct cot {
 char dr[100];
 struct cot *suiv; };
-                                /*la déclaration des fonctions:*/
+                                /*la dÃ©claration des fonctions:*/
 
 void affichage(patient *k)
 { puts(k->nometprenom);
@@ -37,7 +37,7 @@ if(!feof(f))
  affichage(p);
 
 
-else printf("ce patient n'est pas enregistré oubien la date saisie n'est juste,reverifier encorefois,,,,");
+else printf("ce patient n'est pas enregistrÃ© oubien la date saisie n'est juste,reverifier encorefois,,,,");
 fclose(f);
 }
 
@@ -45,14 +45,14 @@ fclose(f);
 void creation(FILE *f,int n){
 patient *p;
 p=(patient*)malloc(sizeof(patient));
-printf("nom & prénon = ");
+printf("nom & prÃ©non = ");
 scanf("%s",p->nometprenom);
 printf("date de naissance (jj.mm.aaaa)= ");
 scanf("%s",p->date);
-printf("numéro de cin = ");
+printf("numÃ©ro de cin = ");
 scanf("%d",&p->cin);
  p->numfiche=n;
-printf("son numéro de fiche est %d",p->numfiche);
+printf("son numÃ©ro de fiche est %d",p->numfiche);
 char cc='\n';
 fwrite(p,sizeof(patient),1,f);
 fwrite(&cc,sizeof(char),1,f);
@@ -60,7 +60,7 @@ fwrite(&cc,sizeof(char),1,f);
 
 void affichect(cot *mm){
 cot *m=mm;
-if(m==NULL) printf("rien à afficher");
+if(m==NULL) printf("rien Ã  afficher");
 else 
 while (m!=NULL){
 puts(m->dr);
@@ -71,7 +71,7 @@ cot *m=tt;
 
 cot *c=(cot*)malloc(sizeof(cot));
 c->suiv=NULL;
- printf("donner le spécialité,le nom et l'adresse:");
+ printf("donner le spÃ©cialitÃ©,le nom et l'adresse:");
 scanf("%s",c->dr);
 if(m!=NULL) {
 while(m->suiv!=NULL)
@@ -83,7 +83,7 @@ else{ m=c;}
 
 void payer(){
 char pa[5]; int s=0;   int i=0;
-printf("1=control;2=traitement;3=opération :");
+printf("1=control;2=traitement;3=opÃ©ration :");
 
 scanf("%s",pa);
 while ((i<5)&&(pa[i]!=NULL)){
@@ -132,7 +132,7 @@ if(a==1)  chercher(f);
 if(a==2){ int nn=nf(f,ff);
           creation(f,nn);
  }
-if(a==3) { printf("donnez le jour,le mois et l'année (jj.mm.aaaa): ");
+if(a==3) { printf("donnez le jour,le mois et l'annÃ©e (jj.mm.aaaa): ");
 scanf("%s",d);
 
 
@@ -148,7 +148,7 @@ scanf("%d",&b);
 if (b==1) affichect(tc);
 else ajouter(tc); }       
 if (a==7)  printf("jfjfk");   
-if((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=6)&&(a!=7))  printf("erreur ! tapez de 1 à 7 !");
+if((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=6)&&(a!=7))  printf("erreur ! tapez de 1 Ã  7 !");
 
 fclose(f);
 
