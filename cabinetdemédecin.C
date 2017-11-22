@@ -4,7 +4,7 @@
 #include <string.h>
 #include <windows.h>
 
-//**********************************la déclaration des nouveaux types**********************************
+//**********************************la dÃ©claration des nouveaux types**********************************
 
 typedef struct date
 {
@@ -61,7 +61,7 @@ int verif(int in)
      else
         return(0);
 }
-//**********************************fonction saisir l'année**********************************
+//**********************************fonction saisir l'annÃ©e**********************************
 
  int saisir_annee(int j)
  {  int n=0;
@@ -223,7 +223,7 @@ void afficheliste(listpatient* h)
 
  void modifiermedicament(listpatient* z)
  {   char ch[100];
-     printf("Donnez le medicament à ajouter.\n");
+     printf("Donnez le medicament Ã  ajouter.\n");
      scanf("%s",ch);
      strcat(z->pa.medicament,ch);
  }
@@ -232,7 +232,7 @@ void afficheliste(listpatient* h)
 
  void modifiertraitement(listpatient* z)
  {  char ch[100];
-    printf("Donnez le traitement à ajouter.\n");
+    printf("Donnez le traitement Ã  ajouter.\n");
     scanf("%s",ch);
     strcat(z->pa.traitement,ch);
  }
@@ -243,7 +243,7 @@ void afficheliste(listpatient* h)
 {   int i=0;
     while(verif(i)==0)
       {
-        printf("Donnez le numero de carte d'identité du patient");
+        printf("Donnez le numero de carte d'identitÃ© du patient");
         scanf("%d",&i);
       }
     listpatient* z;
@@ -327,7 +327,7 @@ void afficheliste(listpatient* h)
 {   int cin1=0;
     while(verif(cin1)==0)
        {
-          printf("donnez le numero de carte d'identité du patient pour lui donnez un rendez-vous.\n");
+          printf("donnez le numero de carte d'identitÃ© du patient pour lui donnez un rendez-vous.\n");
           scanf("%d",&cin1);
        }
 
