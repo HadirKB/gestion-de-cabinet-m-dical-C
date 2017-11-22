@@ -4,7 +4,7 @@
 #define xxx 12
 
 
-                                  /*la dÈclaration des structure */
+                                  /*la d√©claration des structure */
 
 typedef struct patient{
 char nometprenom[50];
@@ -35,14 +35,14 @@ int nb;
 };
 
 
-                                /*la dÈclaration des fonctions:*/
+                                /*la d√©claration des fonctions:*/
 
 void affichage(patient *k)
 {printf("-------------Resultat de recherche---------------");
  printf("\nMdm/M: %s\n",k->nometprenom);
 printf("date de naissance=%s\n",k->date);
-printf("numÈro de cin=%d\n",k->cin);
-printf("-->numÈro de fiche=%d\n",k->numfiche);
+printf("num√©ro de cin=%d\n",k->cin);
+printf("-->num√©ro de fiche=%d\n",k->numfiche);
 
 }
 
@@ -58,7 +58,7 @@ p=p->suiv; }
 if(p!=NULL){
  affichage(p);
 }
-else printf("ce patient n'est pas enregistrÈ oubien la date saisie n'est juste,reverifier encorefois svp !");
+else printf("ce patient n'est pas enregistr√© oubien la date saisie n'est juste,reverifier encorefois svp !");
 }
 
 
@@ -66,15 +66,15 @@ void creation(liste *l){
 patient *p;
 p=(patient*)malloc(sizeof(patient));
 p->suiv=NULL;
-printf("nom & prÈnon = ");
+printf("nom & pr√©non = ");
 scanf("%s",p->nometprenom);
 printf("date de naissance (jj/mm/aaaa)= ");
 scanf("%s",p->date);
-printf("numÈro de cin = ");
+printf("num√©ro de cin = ");
 scanf("%d",&p->cin);
 if(l->tete==NULL)  p->numfiche= 1;
 else p->numfiche=l->queue->numfiche + 1;
-printf("son numÈro de fiche est %d",p->numfiche);
+printf("son num√©ro de fiche est %d",p->numfiche);
 
 if(l->tete==NULL) {
 l->tete=p;
@@ -86,7 +86,7 @@ l->queue=p;}
 
 void payer(){
 char pa[5]; int s=0;   int i=0;
-printf("1=control;2=traitement;3=opÈration :");
+printf("1=control;2=traitement;3=op√©ration :");
 
 scanf("%s",pa);
 while ((i<5)&&(pa[i]!=NULL)){
@@ -105,7 +105,7 @@ int da;
 cot tc[20];
 int a,b,c,jo;
 
-/*crÈation manuelle d'agenda*/
+/*cr√©ation manuelle d'agenda*/
 
  /*
  mo[0].nb=30;
@@ -151,7 +151,7 @@ int x=1;
  l=(liste*)malloc(sizeof(liste));
 l->tete=NULL;
 l->queue=NULL;
-printf("\n\t******** Bonjour Monsieur/Madame,choisissez une t‚che svp ********\n\n");
+printf("\n\t******** Bonjour Monsieur/Madame,choisissez une t√¢che svp ********\n\n");
 do {
  printf("_____________________________________________________________\n\n (1):Chercher un patient.\n (2):Enregistrer un nouveau patient.\n (3):Afficher les rendez-vous.\n (4):Enregistrer un nouveau rendez-vous.\n (5):Le payement.\n (6):Les contacts.\n");
  printf("_____________________________________________________________\n");
@@ -187,7 +187,7 @@ printf(". %d->%d: %s",mo[da-1].j[jo-1].t[gg].tp[0],mo[da-1].j[jo-1].t[gg].tp[0],
  scanf("%s",kd);
 // for(int af=0;af<strlen(kd);af++)
 // mo[ka].j[kb].t[kc-8].rv[af]=kd[af];
- printf("\n-> ^_^ enregistrÈ avec succÈs. Merci bien :)");
+ printf("\n-> ^_^ enregistr√© avec succ√©s. Merci bien :)");
 
 
 
@@ -199,7 +199,7 @@ if (a==5)  payer();
  if(a==6) { printf("1:afficher / 2:ajouter \n");
 scanf("%d",&b);
 if (b==1) {
-if(x==1) printf("rien ‡ afficher");
+if(x==1) printf("rien √† afficher");
 else 
 for(int q=0;q<x-1;q++)
 printf(". %s\n",tc[q].dr);
@@ -208,13 +208,13 @@ printf(". %s\n",tc[q].dr);
 }
 else { 
 if (x<=20)
-printf("donner le spÈcialitÈ,le nom et l'adresse:");
+printf("donner le sp√©cialit√©,le nom et l'adresse:");
 scanf("%s",tc[x-1].dr);
 printf("%s",tc[x-1].dr);
 printf("le contenu est %s",tc[x-1].dr);  x++;
 } }
 
-if((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=6))  printf("SVP tapez de 1 ‡ 6 !");
+if((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=6))  printf("SVP tapez de 1 √† 6 !");
  printf("\n_____________________________________________________________\n");
 printf("\n (0):Menu :"); scanf("%d",&c);
 
